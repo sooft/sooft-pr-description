@@ -154,10 +154,10 @@ def main():
         pull_request_files.extend(pull_files_chunk)
 
         completion_prompt = f"""
-Write a pull request description focusing on the motivation behind the change and why it improves the project.
-Go straight to the point.
-
-The title of the pull request is "{pull_request_title}" and the following changes took place: \n
+        Tu trabajo es analizar el codigo enviado a github en un pull request.
+Crea un descripcion del pull request de codigo que se cambio.
+luego busca posibles bugs y sugiere cambios mostrando una porcion de codigo.
+responde en español.
 """
     for pull_request_file in pull_request_files:
         # Not all PR file metadata entries may contain a patch section
